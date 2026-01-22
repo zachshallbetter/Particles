@@ -12,7 +12,6 @@ import { getNumericValue } from '@/utils/math.utils';
 import { useParticleSystem, type EmittedParticle } from '@/context/ParticleSystemContext';
 import type { WaveParticleConfig } from '@/types/wave.types';
 import type { VisualEffectsConfig } from '@/config/visual-effects.config';
-import { applyWaveGravity } from '@/utils/wave.utils'; // Import applyWaveGravity
 
 const CLUSTER_RADIUS = 40;
 

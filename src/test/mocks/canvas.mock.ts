@@ -1,0 +1,70 @@
+import { vi } from 'vitest';
+
+export const createMockCanvas = (width = 800, height = 600): HTMLCanvasElement => {
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  return canvas;
+};
+
+export const createMockContext2D = (): CanvasRenderingContext2D => {
+  return {
+    canvas: {} as HTMLCanvasElement,
+    clearRect: vi.fn(),
+    fillRect: vi.fn(),
+    strokeRect: vi.fn(),
+    fillText: vi.fn(),
+    strokeText: vi.fn(),
+    measureText: vi.fn().mockReturnValue({ width: 0 }),
+    lineWidth: 1,
+    lineCap: 'butt',
+    lineJoin: 'miter',
+    miterLimit: 10,
+    setLineDash: vi.fn(),
+    getLineDash: vi.fn().mockReturnValue([]),
+    lineDashOffset: 0,
+    font: '10px sans-serif',
+    textAlign: 'start',
+    textBaseline: 'alphabetic',
+    direction: 'ltr',
+    fillStyle: '#000000',
+    strokeStyle: '#000000',
+    createLinearGradient: vi.fn(),
+    createRadialGradient: vi.fn(),
+    createPattern: vi.fn(),
+    shadowBlur: 0,
+    shadowColor: 'rgba(0, 0, 0, 0)',
+    shadowOffsetX: 0,
+    shadowOffsetY: 0,
+    globalAlpha: 1,
+    globalCompositeOperation: 'source-over',
+    save: vi.fn(),
+    restore: vi.fn(),
+    beginPath: vi.fn(),
+    closePath: vi.fn(),
+    moveTo: vi.fn(),
+    lineTo: vi.fn(),
+    bezierCurveTo: vi.fn(),
+    quadraticCurveTo: vi.fn(),
+    arc: vi.fn(),
+    arcTo: vi.fn(),
+    rect: vi.fn(),
+    fill: vi.fn(),
+    stroke: vi.fn(),
+    drawFocusIfNeeded: vi.fn(),
+    clip: vi.fn(),
+    isPointInPath: vi.fn().mockReturnValue(false),
+    isPointInStroke: vi.fn().mockReturnValue(false),
+    rotate: vi.fn(),
+    scale: vi.fn(),
+    translate: vi.fn(),
+    transform: vi.fn(),
+    setTransform: vi.fn(),
+    resetTransform: vi.fn(),
+    drawImage: vi.fn(),
+    createImageData: vi.fn(),
+    getImageData: vi.fn(),
+    putImageData: vi.fn(),
+    getContextAttributes: vi.fn().mockReturnValue({}),
+  } as unknown as CanvasRenderingContext2D;
+};
