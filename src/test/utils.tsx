@@ -45,6 +45,7 @@ export function createMockCanvas(width = 800, height = 600): HTMLCanvasElement {
       data: new Uint8ClampedArray(width * height * 4),
       width,
       height,
+      colorSpace: 'srgb',
     })) as typeof context.getImageData;
     context.putImageData = vi.fn();
   }
