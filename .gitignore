@@ -27,3 +27,23 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# --- added for Antigravity/indexer parity (auto) ---
+build/
+out/
+target/
+.next/
+.turbo/
+.vercel/
+coverage/
+playwright-report/
+test-results/
+graphify-out/
+.reports/
+__pycache__/
+.venv/
+venv/
+DerivedData/
+.gradle/
+.expo/
+!.env.example
