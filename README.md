@@ -71,4 +71,4 @@ CI). When this section was written, `npm run test:run` failed in all 59 test fil
 
 ## License
 
-No license is declared yet.
+MIT. See [LICENSE](LICENSE).
