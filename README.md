@@ -7,7 +7,7 @@ A beautiful, high-performance particle and wave animation system built with Reac
 ```bash
 npm install
 npm run dev
-# Opens at http://localhost:3001
+# Opens at http://localhost:4222 (the port set in vite.config.ts)
 ```
 
 ## 📚 Documentation
@@ -46,3 +46,29 @@ npm run dev
 - ✅ Works Anywhere (Static Build)
 
 See **[HOUSEKEEPING_SUMMARY.md](./docs/HOUSEKEEPING_SUMMARY.md)** for full details on what's been implemented and organized.
+
+## Repository map
+
+- `src/`: the Vite app entry (`main.tsx`, `App.tsx`), contexts, controllers, hooks, services and the test setup in `src/test/`.
+- `components/`, `controllers/`, `context/`, `config/`, `hooks/`, `lib/`, `utils/`: the particle, wave and UI components and their configuration.
+- `app/`: Next.js-style pages (`page.tsx`, `sandbox`, `elements`, `effects-showcase`).
+- `docs/`: the guides listed above.
+- `vite.config.ts`, `vitest.config.ts`: build and test configuration.
+
+## How to verify
+
+```bash
+npm run build       # tsc -b && vite build
+npm run test:run    # vitest, one run (tests are src/**/*.test.ts(x))
+```
+
+## Limitations
+
+The Project Status checklist above is the maintainer's own and is not backed by a check in this repository (there is no
+CI). When this section was written, `npm run test:run` failed in all 59 test files (imports such as
+`./ElementParticleContext` do not resolve) and `tsc -b` reported 69 type errors, so `npm run build` failed at its
+`tsc -b` step. `vite build` alone completed. The package is version 0.1.0 and no release is tagged.
+
+## License
+
+No license is declared yet.
